@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if images %}
+    {% for image in images %}
+        <img src="{{ image.image.url }}" alt="">
+    {% endfor %}
+{% else %}
+<h1>No hay nigun post!</h1>
+{% endif %}
+</body>
+</html>
